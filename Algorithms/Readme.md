@@ -1,0 +1,1 @@
+This project represent practice realisation of algoritms which are described and explained in the book of Rod Stephens "A Practical Approach to Computer Algorithms".
