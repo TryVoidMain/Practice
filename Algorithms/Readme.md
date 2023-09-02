@@ -1,1 +1,2 @@
-This project represent practice realisation of algoritms which are described and explained in the book of Rod Stephens "A Practical Approach to Computer Algorithms".
+This project represent practice realisation of numeric algoritms which are described and explained in the book of Rod Stephens "A Practical Approach to Computer Algorithms".
+Project realised as class library, where every class are static and have realiation of one algorithm.
