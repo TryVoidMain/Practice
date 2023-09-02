@@ -1,6 +1,4 @@
-﻿using Algorithms;
-
-namespace TestAlgoritms {
+﻿namespace TestAlgoritms {
 	public class Program
 	{
 		static void Main(string[] args)
