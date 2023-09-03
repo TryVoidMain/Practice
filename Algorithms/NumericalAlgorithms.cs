@@ -1,9 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
-
-namespace Algorithms
+﻿namespace Algorithms
 {
-	public static class NumericalAlgorithms
+	public class NumericalAlgorithms
 	{
 		#region Greatest common numerics
 
@@ -13,7 +10,7 @@ namespace Algorithms
 		/// <param name="x"></param>
 		/// <param name="y"></param>
 		/// <returns></returns>
-		public static int FindGreatestCommonDivisors(int x, int y)
+		public int FindGreatestCommonDivisors(int x, int y)
 		{
 			int max = Math.Max(x, y);
 			int min = Math.Min(x, y);
