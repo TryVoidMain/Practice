@@ -1,6 +1,6 @@
 ﻿namespace Algorithms
 {
-	public class NumericalAlgorithms
+	public static class GreatestCommonDivisors
 	{
 		#region Greatest common numerics
 
@@ -10,7 +10,7 @@
 		/// <param name="x"></param>
 		/// <param name="y"></param>
 		/// <returns></returns>
-		public int FindGreatestCommonDivisors(int x, int y)
+		public static int FindGreatestCommonDivisors(int x, int y)
 		{
 			int max = Math.Max(x, y);
 			int min = Math.Min(x, y);
