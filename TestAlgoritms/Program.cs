@@ -1,24 +1,27 @@
-﻿namespace TestAlgoritms {
+﻿using NumericAlgorithms;
+using TestAlgoritms.Types;
+
+namespace TestAlgoritms {
 	public class Program
 	{
 		static void Main(string[] args)
 		{
 			ChooseNumericalAlgoritms();
-			Console.ReadLine();
-
 		}
 
 		private static void ChooseNumericalAlgoritms()
 		{
 			Console.WriteLine("Choose numerical algorithm:\n" +
-				"1. Greatest common divisor");
+				"1. Greatest common divisor\n" +
+				"2. Fast power");
 
 			var selection = ReadSelection();
+			if (Enum.TryParse(selection.ToString(), false, out NumericAlgorithmsEnum result))
+			//TODO Нужна фабрика по вызову метода выбранного алгоритма.
+				
 
 			if (selection == -1)
 				return;
-
-
 		}
 
 		/// <summary>
