@@ -1,6 +1,6 @@
 ﻿namespace Algorithms
 {
-	public static class GreatestCommonDivisors
+	public class GreatestCommonDivisors
 	{
 		#region Greatest common numerics
 

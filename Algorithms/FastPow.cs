@@ -1,6 +1,6 @@
 ﻿namespace NumericAlgorithms
 {
-    public static class FastPow
+    public class FastPow
     {
 
         /// <summary>
@@ -9,7 +9,7 @@
         /// <param name="num"></param>
         /// <param name="power"></param>
         /// <returns></returns>
-        public static long FindFastPow(long num, long power)
+        public long FindFastPow(long num, long power)
         {
             if (power == 0)
                 return 1;
@@ -32,7 +32,7 @@
             }
         }
 
-        public static bool Validate(long value)
+        public bool Validate(long value)
         {
             if (value < 0)
                 return false;
