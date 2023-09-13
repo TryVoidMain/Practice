@@ -1,4 +1,6 @@
-﻿namespace NumericAlgorithms
+﻿using System.Net;
+
+namespace NumericAlgorithms
 {
 
     public class PrimeNumbers
@@ -10,13 +12,13 @@
 
 
         /// <summary>
-        /// Method finds prime multipliers of input numbers. Algoritmic complexity O(N).
+        /// Method finds prime multipliers of input number. Algoritmic complexity O(N).
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public List<int> FindFactors(int number)
+        public static List<int> FindPrimeFactors(int number)
         {
-            List<int> result = new List<int>();
+            var result = new List<int>();
             int i = 2;
 
             while (i < number)
@@ -37,13 +39,13 @@
         }
 
         /// <summary>
-        /// Method finds prime multipliers of input numbers. Algoritmic complexity O(sqrt(N)).
+        /// Method finds prime multipliers of input number. Algoritmic complexity O(sqrt(N)).
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public List<int> FindFactorsFaster(int number)
+        public static List<int> FindPrimeFactorsFaster(int number)
         {
-            List <int> result = new List<int>();
+            var result = new List<int>();
             int i = 2;
             
             if (number % i == 0)
@@ -69,6 +71,40 @@
             
             if (number > 1)
                 result.Add(number);
+
+            return result;
+        }
+
+
+        /// <summary>
+        /// Method finds all prime numbers in input number. Algoritmic complexity O(N*log(log(N))).
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public static List<int> FindPrimesSieveOfEratosthenes(int number)
+        {
+            var isComposite = new bool[number + 1];
+            for (int i = 4; i < number; i += 2)
+                isComposite[i] = true;
+
+            int nextPrime = 3;
+            int stopAt = (int)Math.Sqrt(number);
+            
+            while (nextPrime  <= stopAt)
+            {
+                for (int i = nextPrime * 2; i < number; i+=nextPrime)
+                    isComposite[i] = true;
+
+                nextPrime += 2;
+
+                while (nextPrime <= number && isComposite[nextPrime])
+                    nextPrime += 2;
+            }
+
+            var result = new List<int>();
+            for (int i = 2; i < number; i++)
+                if (!isComposite[i])
+                    result.Add(i);
 
             return result;
         }
