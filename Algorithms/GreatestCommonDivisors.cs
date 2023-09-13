@@ -2,7 +2,10 @@
 {
 	public class GreatestCommonDivisors
 	{
-		#region Greatest common numerics
+        /// <summary>
+        /// Class provides methods to find common divisors
+        /// </summary>
+        public GreatestCommonDivisors() { }
 
 		/// <summary>
 		/// This method finds greatest common divisors for two input values
@@ -24,7 +27,5 @@
 
 			return max;
 		}
-
-		#endregion
 	}
 }

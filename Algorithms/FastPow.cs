@@ -2,6 +2,10 @@
 {
     public class FastPow
     {
+        /// <summary>
+        /// Class provides methods to pow numbers
+        /// </summary>
+        public FastPow() { }
 
         /// <summary>
         /// Method powers input number with reccurent function
