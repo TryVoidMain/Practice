@@ -4,9 +4,16 @@ using TestAlgoritms.Types;
 namespace TestAlgoritms {
 	public class Program
 	{
-		static void Main(string[] args)
+		public static void Main(string[] args)
 		{
-			ChooseNumericalAlgoritms();
+			//ChooseNumericalAlgoritms();
+
+			var num = int.Parse(Console.ReadLine());
+
+			foreach (var res in PrimeNumbers.FindPrimesSieveOfEratosthenes(num))
+				Console.WriteLine(res);
+
+			Console.ReadLine();
 		}
 
 		private static void ChooseNumericalAlgoritms()

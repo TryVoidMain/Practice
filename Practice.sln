@@ -5,9 +5,16 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumericAlgorithms", "Algorithms\NumericAlgorithms.csproj", "{98C2F8E8-342E-4EEE-B5E8-4A035E51A1C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAlgoritms", "TestAlgoritms\TestAlgoritms.csproj", "{B80798CC-DF1C-4B63-9F71-F67F7F782F3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAlgoritms", "TestAlgoritms\TestAlgoritms.csproj", "{B80798CC-DF1C-4B63-9F71-F67F7F782F3D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{98C2F8E8-342E-4EEE-B5E8-4A035E51A1C8} = {98C2F8E8-342E-4EEE-B5E8-4A035E51A1C8}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patterns", "Patterns\Patterns.csproj", "{8B052E54-A3BC-45A2-AD86-80BD402BCDE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPatterns", "TestPatterns\TestPatterns.csproj", "{F503A72F-E79F-4D29-BC6B-36FAD0F5D4B9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8B052E54-A3BC-45A2-AD86-80BD402BCDE4} = {8B052E54-A3BC-45A2-AD86-80BD402BCDE4}
 	EndProjectSection
 EndProject
 Global
@@ -24,6 +31,14 @@ Global
 		{B80798CC-DF1C-4B63-9F71-F67F7F782F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B80798CC-DF1C-4B63-9F71-F67F7F782F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B80798CC-DF1C-4B63-9F71-F67F7F782F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B052E54-A3BC-45A2-AD86-80BD402BCDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B052E54-A3BC-45A2-AD86-80BD402BCDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B052E54-A3BC-45A2-AD86-80BD402BCDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B052E54-A3BC-45A2-AD86-80BD402BCDE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F503A72F-E79F-4D29-BC6B-36FAD0F5D4B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F503A72F-E79F-4D29-BC6B-36FAD0F5D4B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F503A72F-E79F-4D29-BC6B-36FAD0F5D4B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F503A72F-E79F-4D29-BC6B-36FAD0F5D4B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
