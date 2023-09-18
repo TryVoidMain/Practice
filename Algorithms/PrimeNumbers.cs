@@ -10,7 +10,6 @@ namespace NumericAlgorithms
         /// </summary>
         public PrimeNumbers() { }
 
-
         /// <summary>
         /// Method finds prime multipliers of input number. Algoritmic complexity O(N).
         /// </summary>
@@ -105,6 +104,33 @@ namespace NumericAlgorithms
             for (int i = 2; i < number; i++)
                 if (!isComposite[i])
                     result.Add(i);
+
+            return result;
+        }
+
+
+        public static List<int> FindOwnRealisation(int number)
+        {
+            List<int> result = new List<int>();
+            var boolArray = new bool[number];
+            result.Add(2);
+
+            for (int i = 4; i < number; i += 2)
+                boolArray[i] = true;
+
+            var nextPrime = 3;
+            int stopAt = (int)Math.Sqrt(number);
+
+            while (nextPrime <= stopAt)
+            {
+                for (int i = nextPrime; i < number; i += nextPrime * 2)
+                    boolArray[i] = true;
+
+                result.Add(nextPrime);
+
+                while (nextPrime < number && boolArray[nextPrime])
+                    nextPrime = nextPrime + 2;
+            }
 
             return result;
         }
