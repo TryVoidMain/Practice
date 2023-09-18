@@ -13,7 +13,14 @@ namespace TestAlgoritms {
 			foreach (var res in PrimeNumbers.FindPrimesSieveOfEratosthenes(num))
 				Console.WriteLine(res);
 
-			Console.ReadLine();
+			Console.WriteLine();
+			Console.WriteLine("-----------------------------------------------");
+			Console.WriteLine();
+
+			foreach (var res in PrimeNumbers.FindOwnRealisation(num))
+                Console.WriteLine(res);
+
+            Console.ReadLine();
 		}
 
 		private static void ChooseNumericalAlgoritms()
