@@ -76,7 +76,7 @@ namespace NumericAlgorithms
 
 
         /// <summary>
-        /// Method finds all prime numbers in input number. Algoritmic complexity O(N*log(log(N))).
+        /// Method finds all prime numbers in input number. Implements Sieve of Eratosthenes. Algoritmic complexity O(N*log(log(N))).
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
@@ -108,7 +108,11 @@ namespace NumericAlgorithms
             return result;
         }
 
-
+        /// <summary>
+        /// Method finds all prime numbers in input number. Custom method, upgrade of Sieve of Eratosthenes.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public static List<int> FindOwnRealisation(int number)
         {
             List<int> result = new List<int>();
