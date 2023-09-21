@@ -1,4 +1,4 @@
-﻿namespace NumericAlgorithms.Helpers
+﻿namespace Algorithms.Helpers
 {
     public record IntegratedFunction
     {

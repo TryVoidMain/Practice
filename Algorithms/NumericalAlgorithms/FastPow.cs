@@ -1,4 +1,4 @@
-﻿namespace NumericAlgorithms
+﻿namespace Algorithms.NumericalAlgorithms
 {
     public class FastPow
     {
@@ -31,7 +31,7 @@
                 var res = num * FindFastPow(num, power - 1);
                 if (Validate(res))
                     return res;
-                else 
+                else
                     throw new ArgumentOutOfRangeException(nameof(res));
             }
         }

@@ -1,8 +1,9 @@
-﻿using NumericAlgorithms;
+﻿using Algorithms.NumericalAlgorithms;
 using TestAlgoritms.Types;
 
-namespace TestAlgoritms {
-	public class Program
+namespace TestAlgoritms
+{
+    public class Program
 	{
 		public static void Main(string[] args)
 		{

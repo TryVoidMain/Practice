@@ -1,8 +1,6 @@
-﻿
-using NumericAlgorithms.Helpers;
-using System.Xml.Serialization;
+﻿using Algorithms.Helpers;
 
-namespace NumericAlgorithms
+namespace Algorithms.NumericalAlgorithms
 {
     public class NumericalIntegration
     {
@@ -10,8 +8,6 @@ namespace NumericAlgorithms
         /// Approximation area of function with rectangles. Alternative to integrals.
         /// </summary>
         /// <param name="function">function, which area should be calculated</param>
-        /// <param name="xMin">start calculation point of function</param>
-        /// <param name="xMax">end calculation point of function</param>
         /// <param name="numIntervals">number of intervals which separate start/end point on equal segments</param>
         /// <returns>Calculated area of function</returns>
         public static float RectangleRule(IntegratedFunction function, int numIntervals)

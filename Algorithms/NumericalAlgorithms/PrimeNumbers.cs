@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace NumericAlgorithms
+﻿namespace Algorithms.NumericalAlgorithms
 {
 
     public class PrimeNumbers
@@ -46,7 +44,7 @@ namespace NumericAlgorithms
         {
             var result = new List<int>();
             int i = 2;
-            
+
             if (number % i == 0)
             {
                 result.Add(i);
@@ -67,7 +65,7 @@ namespace NumericAlgorithms
 
                 i += 2;
             }
-            
+
             if (number > 1)
                 result.Add(number);
 
@@ -88,10 +86,10 @@ namespace NumericAlgorithms
 
             int nextPrime = 3;
             int stopAt = (int)Math.Sqrt(number);
-            
-            while (nextPrime  <= stopAt)
+
+            while (nextPrime <= stopAt)
             {
-                for (int i = nextPrime * 2; i < number; i+=nextPrime)
+                for (int i = nextPrime * 2; i < number; i += nextPrime)
                     isComposite[i] = true;
 
                 nextPrime += 2;
