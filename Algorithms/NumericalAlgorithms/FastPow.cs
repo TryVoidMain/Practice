@@ -13,7 +13,7 @@
         /// <param name="num"></param>
         /// <param name="power"></param>
         /// <returns></returns>
-        public long FindFastPow(long num, long power)
+        public static long FindFastPow(long num, long power)
         {
             if (power == 0)
                 return 1;
@@ -29,16 +29,13 @@
             else
             {
                 var res = num * FindFastPow(num, power - 1);
-                if (Validate(res))
-                    return res;
-                else
-                    throw new ArgumentOutOfRangeException(nameof(res));
+                return res;
             }
         }
 
-        public bool Validate(long value)
+        private static bool Validate(long value)
         {
-            if (value > long.MaxValue || value < long.MinValue)
+            if (value > long.MaxValue / 2 || value < long.MinValue / 2)
                 return false;
 
             return true;

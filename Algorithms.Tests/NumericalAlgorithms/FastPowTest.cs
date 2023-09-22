@@ -8,17 +8,27 @@ namespace Algorithms.Tests.NumericalAlgorithms
         public void FindFastPow_Success()
         {
             // Arrange
-            var powClass = new FastPow();
+            var res_100 = 100;
+            var res_4 = 4;
+            var res_49_negativeInput = 49;
+            var res_1_000_000_000_000_000_000 = 1_000_000_000_000_000_000;
 
             // Act
-            var res_100 = powClass.FindFastPow(10, 2);
-            var res_4 = powClass.FindFastPow(2, 2);
-            var res_49_negativeInput = powClass.FindFastPow(-7, 2);
-
             // Assert
-            Assert.Equal(100, res_100);
-            Assert.Equal(4, res_4);
-            Assert.Equal(49, res_49_negativeInput);
+            Assert.Equal(res_100, FastPow.FindFastPow(10, 2));
+            Assert.Equal(res_4, FastPow.FindFastPow(2, 2));
+            Assert.Equal(res_49_negativeInput, FastPow.FindFastPow(-7, 2));
+            Assert.Equal(res_1_000_000_000_000_000_000, FastPow.FindFastPow(10, 18));
+        }
+
+        [Fact]
+        public void FindFastPow_Exception()
+        {
+            // Arrange
+            // Act
+            // Assert
+            Assert.Throws<ArgumentOutOfRangeException>(() => FastPow.FindFastPow(10, 40));
+            Assert.Throws<ArgumentOutOfRangeException>(() => FastPow.FindFastPow(10, 39));
         }
     }
 }
