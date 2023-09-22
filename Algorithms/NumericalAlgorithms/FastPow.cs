@@ -38,7 +38,7 @@
 
         public bool Validate(long value)
         {
-            if (value < 0)
+            if (value > long.MaxValue || value < long.MinValue)
                 return false;
 
             return true;
