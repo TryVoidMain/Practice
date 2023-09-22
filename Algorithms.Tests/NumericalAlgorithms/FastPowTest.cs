@@ -22,6 +22,20 @@ namespace Algorithms.Tests.NumericalAlgorithms
         }
 
         [Fact]
+        public void FindFastPow_Fail()
+        {
+            // Arrange
+            var res_16 = 16;
+            var res_4 = 4;
+
+            // Act
+            // Assert
+            Assert.NotEqual(res_16, FastPow.FindFastPow(8, 2));
+            Assert.NotEqual(res_4, FastPow.FindFastPow(2, 3));
+        }
+
+
+        [Fact]
         public void FindFastPow_Exception()
         {
             // Arrange
